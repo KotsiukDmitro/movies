@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { useState } from 'react';
 import {
     Box,
@@ -13,11 +13,12 @@ import {
     ListItem,
     ListItemButton,
     ListItemIcon,
-    Hidden
+    Hidden,
+    Link
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SettingsIcon from '@mui/icons-material/Settings';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
 
 function Navigation() {
@@ -33,7 +34,7 @@ function Navigation() {
         >
             <List>
                 <ListItem button>
-                    <Link to={'settings'} >
+                    <Link component={RouterLink} to={'settings'} >
                         <ListItemButton>
                             <ListItemIcon>
                                 <SettingsIcon />
@@ -63,15 +64,15 @@ function Navigation() {
                             <MenuIcon />
                         </IconButton>
                     </Hidden>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                        <Link to={'/'}>Movies recommendation</Link>
+                    <Link component={RouterLink} to={'/'}  sx={{ flexGrow: 1 }}>
+                    <Typography variant="h6" component="div" sx={{color: 'white', flexGrow: 1 }}>
+                        Movies recommendation
                     </Typography>
+                    </Link>
                     <Box sx={{ display: { xs: 'none', lg: 'flex' } }}>
-                        <Link to={'settings'} >
-                            <Button sx={{ my: 2, color: 'white', display: 'block' }}>
+                            <Button component={RouterLink} to={'settings'} sx={{ my: 2, color: 'white', display: 'block' }}>
                                 Settings
                             </Button>
-                        </Link>
                     </Box>
                 </Toolbar>
             </AppBar>
