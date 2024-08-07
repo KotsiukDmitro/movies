@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import IconButton from '@mui/material/IconButton';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 
-const CardMenu = ({ onCardSelect }) => {
+const CardMenu = ({ children }) => {
     const [anchorEl, setAnchorEl] = useState(null)
     const open = Boolean(anchorEl)
     const handleClick = (even) => {
@@ -42,9 +41,7 @@ const CardMenu = ({ onCardSelect }) => {
                     },
                 }}
             >
-                <MenuItem onClick={onCardSelect}>
-                    Select
-                </MenuItem>
+                {children}
             </Menu>
         </>
     )

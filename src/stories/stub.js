@@ -3,7 +3,18 @@ export const movies = [
       "_id": "66b22911abae6ccfd7d1f7df",
       "image": "https://media.themoviedb.org/t/p/w220_and_h330_face/mAx0fEjmO6oZxpEFpLWB0OQjfyM.jpg",
       "title": "ZBOO",
-      "releaseDate": "2021-10-24T08:15:36 -03:00"
+      "releaseDate": "2021-10-24T08:15:36 -03:00",
+      "genres": [
+        {
+          id: 1,
+          name: 'Drama'
+        },
+        {
+          id: 2,
+          name: 'Horror'
+        },
+      ],
+      "runtime": 120
     },
     {
       "_id": "66b229112049847759b68fbc",
